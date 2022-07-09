@@ -6,8 +6,8 @@ export interface SetupInterceptorArgs {
 }
 export interface CreateUrlArgs {
   url: string;
-  queries: Array<Query>;
-  args: Array<string>;
+  queries?: Array<Query>;
+  args?: Array<string>;
 }
 export interface Query {
   key: string;
@@ -25,6 +25,7 @@ export interface SendChaparArgs<T = any, R = any, D = any> {
   body?: T;
   setToken?: boolean;
   headers?: Record<string, any>;
+  dto?: (payload: R) => D | null;
 }
 export interface SendChaparReturnType<T = any> {
   success: boolean;
@@ -32,7 +33,7 @@ export interface SendChaparReturnType<T = any> {
   message?: string;
 }
 
-class Api {
+export default class Api {
   private agent: AxiosInstance;
   private successStatusCode = [200, 201];
 
@@ -44,7 +45,7 @@ class Api {
     });
   }
 
-  setupInterceptors({ on401Callback }: SetupInterceptorArgs) {
+  setupInterceptors({ on401Callback }: SetupInterceptorArgs): void {
     this.agent.interceptors.response.use(
       response => {
         return response;
