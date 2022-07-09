@@ -1,0 +1,243 @@
+// @font-face {
+//   font-family: IranSans;
+//   src: url('../fonts/iran_sans_regular.ttf') format('truetype');
+//   font-weight: normal;
+// }
+
+// @font-face {
+//   font-family: IranSans;
+//   src: url('../fonts/iran_sans_bold.ttf') format('truetype');
+//   font-weight: bold;
+// }
+
+// @font-face {
+//   font-family: IranSans;
+//   src: url('../fonts/iran_sans_medium.ttf') format('truetype');
+//   font-weight: 500;
+// }
+
+@font-face {
+  font-family: URWDINMedium;
+  src: url('../fonts/urwdin-medium.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: IranSans;
+  src: url('../fonts/iran_sans_regular.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: IranYekan;
+  src: url('../fonts/IranYekanFaNum.ttf') format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: IranYekanEnNum;
+  src: url('../fonts/IranYekanEnNum.ttf') format('truetype');
+  font-weight: 400;
+}
+
+// * {
+//   font-family: var(--font-name) !important;
+// }
+
+body {
+  //-webkit-user-select: none; /* Safari */
+  //-moz-user-select: none; /* Firefox */
+  //-ms-user-select: none; /* IE10+/Edge */
+  //user-select: none; /* Standard */
+  overflow-y: overlay;
+  scrollbar-width: thin;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  // overscroll-behavior-y: contain;
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    position: absolute;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+    opacity: 0.2;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #757575;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+  }
+}
+
+* {
+  scrollbar-width: thin;
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    border-radius: 4px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+    opacity: 0.2;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: #757575;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  &::-webkit-scrollbar-corner {
+    width: 0;
+  }
+}
+
+.scroll {
+  overflow: overlay;
+  &::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+    opacity: 0.2;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: #757575;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+  opacity: 0.2;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #757575;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.thin-scrollbar {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 4px;
+  }
+}
+
+body .rxt-snackbar {
+  top: calc(env(safe-area-inset-top) + 15px);
+}
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  outline: none;
+  &:focus {
+    outline: none;
+  }
+}
+.rxt-spacer {
+  flex-grow: 1;
+}
+
+.rxt-app,
+body {
+  .flex-2 {
+    flex: 2;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+
+  .flex-0 {
+    flex: 0;
+  }
+
+  .opc-7 {
+    opacity: 0.7;
+  }
+
+  .direction-ltr {
+    direction: ltr;
+  }
+
+  .direction-rtl {
+    direction: rtl;
+  }
+
+  .en-text {
+    font-family: URWDINMedium, serif;
+  }
+
+  .fa-text {
+    font-family: IranYekan, serif;
+  }
+
+  .text-end {
+    text-align: end;
+  }
+
+  .wrap-text {
+    word-wrap: anywhere;
+    text-align: left;
+    word-break: break-word;
+  }
+  .overflow-wrap {
+    overflow-wrap: anywhere;
+  }
+  .text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.small-scrollbar {
+  &::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+    border-radius: 4px;
+  }
+}
+
+.hide-scrollbar {
+  &::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    border-radius: 0;
+  }
+}
